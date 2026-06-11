@@ -1,0 +1,55 @@
+/* ==========================================
+   GALERIA EM ESTILO CARROSSEL AUTOPLAY
+   ========================================== */
+.janela-carrossel {
+    width: 100%;
+    max-width: 800px; /* Tamanho ideal para o carrossel no centro */
+    height: 400px;
+    margin: 20px auto 0 auto;
+    overflow: hidden; /* Esconde as imagens que estão fora da tela */
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.trilho-carrossel {
+    display: flex;
+    width: 400%; /* 4 slides = 400% de largura total */
+    height: 100%;
+    animation: carrossel automatico 12s infinite ease-in-out;
+}
+
+.slide {
+    width: 25%; /* Cada slide ocupa exatamente 1/4 do trilho */
+    height: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+}
+
+/* Legenda escura translúcida sobreposta à imagem */
+.legenda-slide {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(36, 33, 33, 0.85); /* Mesma cor #242121 com opacidade */
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    border-top: 2px solid #0af; /* Linha azul combinando com o tema */
+}
+
+/* Lógica da animação para 3 imagens em loop infinito */
+@keyframes carrossel_automatico {
+    0%, 25% { transform: translateX(0); }          /* Imagem 1 em foco */
+33%, 58% { transform: translateX(-25%); }       /* Transição e foco na Imagem 2 */
+66%, 91% { transform: translateX(-50%); }       /* Transição e foco na Imagem 3 */
+100%     { transform: translateX(-75%); }       /* Transição rápida para o clone e reseta */
+}

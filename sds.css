@@ -1,0 +1,200 @@
+/* ==========================================
+   CONFIGURAÇÕES GERAIS E RESET
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ececec;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   MENU DE NAVEGAÇÃO (FLEXBOX)
+   ========================================== */
+#menu {
+    width: 100%;
+    height: 60px;
+    background: #242121;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: fixed; /* Mantém o menu fixo no topo ao rolar a página */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#menu .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+}
+
+#menu ul {
+    display: flex;
+    list-style: none;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #0af;
+    text-transform: uppercase;
+    line-height: 60px;
+    height: 60px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaçamento entre o ícone e o texto */
+    transition: background 0.3s, color 0.3s;
+}
+
+#menu a:hover {
+    background: #444;
+    color: #fff;
+}
+
+/* ==========================================
+   CONTEÚDO E SEÇÕES
+   ========================================== */
+.conteudo-principal {
+    margin-top: 60px; /* Evita que o menu fixo cubra o conteúdo */
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner {
+    background: #242121;
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #0af;
+}
+
+.secao-info {
+    background: white;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.secao-info h2 {
+    margin-bottom: 15px;
+    color: #242121;
+    border-bottom: 2px solid #0af;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+/* Ajustes e refinamentos para textos dentro da seção info */
+.secao-info p {
+    margin-bottom: 15px;
+}
+
+.secao-info h3 {
+    color: #242121;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.secao-info ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    list-style-type: square; /* Estilo diferenciado para listas de tópicos */
+}
+
+.secao-info li {
+    margin-bottom: 8px;
+}
+
+/* ==========================================
+   ÂNCORA DE PÁGINA FIXA À DIREITA
+   ========================================== */
+.ancora-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #0af;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(114, 97, 97, 0.3);
+    transition: transform 0.3s, background 0.3s;
+    z-index: 999;
+}
+
+.ancora-topo:hover {
+    background: #0088cc;
+    transform: scale(1.1);
+}
+
+/* ==========================================
+   RODAPÉ
+   ========================================== */
+footer {
+    background: #242121;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+/* ==========================================
+   ESTILOS COMPLEMENTARES (CARDS DA EQUIPE TÉCNICA)
+   ========================================== */
+.grid-equipe {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card-membro {
+    background: #f9f9f9;
+    border-left: 4px solid #0af;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.card-membro img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid #242121;
+}
+
+.card-membro h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #242121;
+}
+
+.card-membro p strong {
+    color: #0af;
+}
