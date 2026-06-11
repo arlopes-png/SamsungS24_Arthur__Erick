@@ -1,6 +1,4 @@
-/* ==========================================
-   CONFIGURAÇÕES GERAIS E RESET
-   ========================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,9 +12,7 @@ body {
     line-height: 1.6;
 }
 
-/* ==========================================
-   MENU DE NAVEGAÇÃO (FLEXBOX)
-   ========================================== */
+
 #menu {
     width: 100%;
     height: 60px;
@@ -26,7 +22,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    position: fixed; /* Mantém o menu fixo no topo ao rolar a página */
+    position: fixed; 
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -52,7 +48,7 @@ body {
     padding: 0 15px;
     display: flex;
     align-items: center;
-    gap: 8px; /* Espaçamento entre o ícone e o texto */
+    gap: 8px;
     transition: background 0.3s, color 0.3s;
 }
 
@@ -61,11 +57,9 @@ body {
     color: #fff;
 }
 
-/* ==========================================
-   CONTEÚDO E SEÇÕES
-   ========================================== */
+
 .conteudo-principal {
-    margin-top: 60px; /* Evita que o menu fixo cubra o conteúdo */
+    margin-top: 60px; 
     padding: 20px;
     max-width: 1200px;
     margin-left: auto;
@@ -103,7 +97,7 @@ body {
     display: inline-block;
 }
 
-/* Ajustes e refinamentos para textos dentro da seção info */
+
 .secao-info p {
     margin-bottom: 15px;
 }
@@ -117,16 +111,13 @@ body {
 .secao-info ul {
     padding-left: 20px;
     margin-bottom: 20px;
-    list-style-type: square; /* Estilo diferenciado para listas de tópicos */
+    list-style-type: square;
 }
 
 .secao-info li {
     margin-bottom: 8px;
 }
 
-/* ==========================================
-   ÂNCORA DE PÁGINA FIXA À DIREITA
-   ========================================== */
 .ancora-topo {
     position: fixed;
     bottom: 30px;
@@ -150,9 +141,7 @@ body {
     transform: scale(1.1);
 }
 
-/* ==========================================
-   RODAPÉ
-   ========================================== */
+
 footer {
     background: #242121;
     color: #aaa;
@@ -162,9 +151,7 @@ footer {
     width: 100%;
 }
 
-/* ==========================================
-   ESTILOS COMPLEMENTARES (CARDS DA EQUIPE TÉCNICA)
-   ========================================== */
+
 .grid-equipe {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
